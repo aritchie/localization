@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Threading.Tasks;
 using Acr.Localization.Api.Client.ViewModels;
 using Flurl;
+using Flurl.Http;
 
 
 namespace Acr.Localization.Api.Client {
@@ -24,9 +25,10 @@ namespace Acr.Localization.Api.Client {
         {
             // TODO: could monitor locale change to swap this
             // TODO: write to local cache with expiration date
+            // TODO: always check cache first
             this.package = await this.BaseUrl
                 .AppendPathSegment(this.AppName)
-                .ReceiveJson<LocalizationPackage>();
+                .GetJsonAsync<LocalizationPackage>();
         }
 
 
