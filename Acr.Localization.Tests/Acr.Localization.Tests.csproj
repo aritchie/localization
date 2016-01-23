@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4021A5B7-91FF-463C-AD13-D9999A49D15F}</ProjectGuid>
+    <ProjectGuid>{40ABC3A8-1AD7-484A-85F4-3F6366362EE8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Acr.Localization.Api.Core</RootNamespace>
-    <AssemblyName>Acr.Localization.Api.Core</AssemblyName>
+    <RootNamespace>Acr.Localization.Tests</RootNamespace>
+    <AssemblyName>Acr.Localization.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.0.5813.39031, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
@@ -37,14 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ILocalizationManager.cs" />
-    <Compile Include="Models\App.cs" />
-    <Compile Include="Models\Locale.cs" />
-    <Compile Include="Models\LocalizationSet.cs" />
-    <Compile Include="Models\LocalizedValue.cs" />
+    <Compile Include="ResourceLocalizationImplTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Acr.Localization\Acr.Localization.csproj">
+      <Project>{b11a5b45-6a27-4903-877e-e3a11350639f}</Project>
+      <Name>Acr.Localization</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

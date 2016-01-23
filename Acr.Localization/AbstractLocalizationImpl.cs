@@ -2,13 +2,21 @@
 using System.Globalization;
 using System.Threading.Tasks;
 
+
 namespace Acr.Localization {
 
     public abstract class AbstractLocalizationImpl : ILocalization {
 
+
         public virtual Task Initialize()
         {
             return Task.FromResult<object>(null);
+        }
+
+
+        protected virtual CultureInfo GetCurrentCultureInfo()
+        {
+            return Acr.DeviceInfo.DeviceInfo.App.Locale;
         }
 
 
@@ -34,13 +42,13 @@ namespace Acr.Localization {
 
         public virtual string GetString(string key, params object[] args)
         {
-            return this.GetString(null, key, args);
+            return this.GetString(this.GetCurrentCultureInfo(), key, args);
         }
 
 
         public virtual string GetString(Enum value)
         {
-            return this.GetString(null, value);
+            return this.GetString(this.GetCurrentCultureInfo(), value);
         }
 
 

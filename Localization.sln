@@ -11,11 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acr.Localization.Api.Core",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3FCC3AA2-177F-42DE-981D-8FC43E004EF2}"
 	ProjectSection(SolutionItems) = preProject
+		nuspec\Acr.Localization.Api.Client.nuspec = nuspec\Acr.Localization.Api.Client.nuspec
 		nuspec\Acr.Localization.nuspec = nuspec\Acr.Localization.nuspec
 		nuspec\nuget.exe = nuspec\nuget.exe
 		nuspec\pack.cmd = nuspec\pack.cmd
 		nuspec\push.cmd = nuspec\push.cmd
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acr.Localization.Tests", "Acr.Localization.Tests\Acr.Localization.Tests.csproj", "{40ABC3A8-1AD7-484A-85F4-3F6366362EE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +38,10 @@ Global
 		{4021A5B7-91FF-463C-AD13-D9999A49D15F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4021A5B7-91FF-463C-AD13-D9999A49D15F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4021A5B7-91FF-463C-AD13-D9999A49D15F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40ABC3A8-1AD7-484A-85F4-3F6366362EE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40ABC3A8-1AD7-484A-85F4-3F6366362EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40ABC3A8-1AD7-484A-85F4-3F6366362EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40ABC3A8-1AD7-484A-85F4-3F6366362EE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
