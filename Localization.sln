@@ -20,6 +20,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acr.Localization.Tests", "Acr.Localization.Tests\Acr.Localization.Tests.csproj", "{40ABC3A8-1AD7-484A-85F4-3F6366362EE8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{A600F62B-3A65-4A23-8D49-DC2D3F42BA53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acr.Localization.Api.Core.Ef", "Acr.Localization.Api.Core.Ef\Acr.Localization.Api.Core.Ef.csproj", "{D479616E-6594-4952-B03F-30DD27C88663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acr.Localization.Api", "Acr.Localization.Api\Acr.Localization.Api.csproj", "{397F02BC-4B5C-4902-A508-6F3EC1DFF39B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acr.Localization.Api.Tests", "Acr.Localization.Api.Tests\Acr.Localization.Api.Tests.csproj", "{C6087334-89DF-43C0-8F40-FA98C67ADA04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acr.Localization.Api.IisHosting", "Acr.Localization.Api.IisHosting\Acr.Localization.Api.IisHosting.csproj", "{BC39A7FF-4562-4BA6-A4C4-22A0F1EAAA04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,8 +52,31 @@ Global
 		{40ABC3A8-1AD7-484A-85F4-3F6366362EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40ABC3A8-1AD7-484A-85F4-3F6366362EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40ABC3A8-1AD7-484A-85F4-3F6366362EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D479616E-6594-4952-B03F-30DD27C88663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D479616E-6594-4952-B03F-30DD27C88663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D479616E-6594-4952-B03F-30DD27C88663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D479616E-6594-4952-B03F-30DD27C88663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{397F02BC-4B5C-4902-A508-6F3EC1DFF39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{397F02BC-4B5C-4902-A508-6F3EC1DFF39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{397F02BC-4B5C-4902-A508-6F3EC1DFF39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{397F02BC-4B5C-4902-A508-6F3EC1DFF39B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6087334-89DF-43C0-8F40-FA98C67ADA04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6087334-89DF-43C0-8F40-FA98C67ADA04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6087334-89DF-43C0-8F40-FA98C67ADA04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6087334-89DF-43C0-8F40-FA98C67ADA04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC39A7FF-4562-4BA6-A4C4-22A0F1EAAA04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC39A7FF-4562-4BA6-A4C4-22A0F1EAAA04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC39A7FF-4562-4BA6-A4C4-22A0F1EAAA04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC39A7FF-4562-4BA6-A4C4-22A0F1EAAA04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4021A5B7-91FF-463C-AD13-D9999A49D15F} = {A600F62B-3A65-4A23-8D49-DC2D3F42BA53}
+		{D479616E-6594-4952-B03F-30DD27C88663} = {A600F62B-3A65-4A23-8D49-DC2D3F42BA53}
+		{397F02BC-4B5C-4902-A508-6F3EC1DFF39B} = {A600F62B-3A65-4A23-8D49-DC2D3F42BA53}
+		{C6087334-89DF-43C0-8F40-FA98C67ADA04} = {A600F62B-3A65-4A23-8D49-DC2D3F42BA53}
+		{BC39A7FF-4562-4BA6-A4C4-22A0F1EAAA04} = {A600F62B-3A65-4A23-8D49-DC2D3F42BA53}
 	EndGlobalSection
 EndGlobal

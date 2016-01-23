@@ -9,8 +9,8 @@ namespace Acr.Localization.Api.Core.Models
         public virtual string AccessKey { get; set; }
         public virtual string Value { get; set; }
     
-        public virtual int LocalizationSetId { get; set; }
-        public virtual LocalizationSet LocalizationSet { get; set; }
+        public virtual int AppId { get; set; }
+        public virtual App App { get; set; }
 
         public virtual int LocaleId { get; set; }
         public virtual Locale Locale { get; set; }
