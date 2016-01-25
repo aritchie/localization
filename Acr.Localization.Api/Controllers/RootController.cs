@@ -17,9 +17,10 @@ namespace Acr.Localization.Api.Controllers
 
         [HttpGet]
         [Route("~/{appName}/{locale}")]
-        public Task<IHttpActionResult> Get()
+        public async Task<IHttpActionResult> Get(string appName, string localeCode)
         {
-            return null;
+            var result = await this.localizationManager.GetPackage(appName, localeCode);
+            return this.Ok(result);
         }
     }
 }

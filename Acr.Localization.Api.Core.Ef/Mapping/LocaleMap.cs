@@ -10,7 +10,10 @@ namespace Acr.Localization.Api.Core.Ef.Mapping
 
         public LocaleMap()
         {
-            
+            this.Property(x => x.AccessCode);
+            this.HasMany(x => x.LocalizedValues)
+                .WithRequired(x => x.Locale)
+                .HasForeignKey(x => x.LocaleId);
         }
     }
 }

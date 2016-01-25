@@ -13,9 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		nuspec\Acr.Localization.Api.Client.nuspec = nuspec\Acr.Localization.Api.Client.nuspec
 		nuspec\Acr.Localization.nuspec = nuspec\Acr.Localization.nuspec
+		license.txt = license.txt
 		nuspec\nuget.exe = nuspec\nuget.exe
 		nuspec\pack.cmd = nuspec\pack.cmd
 		nuspec\push.cmd = nuspec\push.cmd
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acr.Localization.Tests", "Acr.Localization.Tests\Acr.Localization.Tests.csproj", "{40ABC3A8-1AD7-484A-85F4-3F6366362EE8}"

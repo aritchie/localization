@@ -47,6 +47,12 @@
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Acr.Localization.Api.Client\Acr.Localization.Api.Client.csproj">
+      <Project>{324fa870-9376-45cd-98a3-9eac36b42447}</Project>
+      <Name>Acr.Localization.Api.Client</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

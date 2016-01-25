@@ -62,6 +62,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Acr.Localization.Api.Client\Acr.Localization.Api.Client.csproj">
+      <Project>{324fa870-9376-45cd-98a3-9eac36b42447}</Project>
+      <Name>Acr.Localization.Api.Client</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Acr.Localization.Api.Core\Acr.Localization.Api.Core.csproj">
       <Project>{4021a5b7-91ff-463c-ad13-d9999a49d15f}</Project>
       <Name>Acr.Localization.Api.Core</Name>
