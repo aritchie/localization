@@ -12,10 +12,12 @@
         <projectUrl>https://github.com/aritchie/localization</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <tags>multilingual localization pcl</tags>
-        <dependencies>
-            <dependency id="Acr.DeviceInfo" version="[3.2.3, 4)" />
-        </dependencies>
         <releaseNotes>
+1.2
+[feature] Bind your localization to a strongly typed object.  Why not use RESX generated code?  Because your localization may have come from a remote or from iOS or Android or who knows!
+remove dependency on acr.deviceinfo.  Binding also checks for missing keys and allows for prefixing ([TypeName]+property Name)
+[breaking] remove dependency on deviceinfo
+
 1.1
 Use deviceinfo for better cultureinfo detection on android/ios
 
