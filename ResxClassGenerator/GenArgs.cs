@@ -1,5 +1,6 @@
 ﻿using System;
 using CommandLine;
+using CommandLine.Text;
 
 
 namespace ResxClassGenerator
@@ -14,5 +15,12 @@ namespace ResxClassGenerator
 
         [Option("namespace", Required = true, HelpText = "Namespace of the class")]
         public string Namespace { get; set; }
+
+
+        [HelpOption]
+        public string GetUsage()
+        {
+            return HelpText.AutoBuild(this, current => HelpText.DefaultParsingErrorsHandler(this, current));
+        }
     }
 }

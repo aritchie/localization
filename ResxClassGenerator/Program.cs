@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Resources;
 using System.Text;
+using CommandLine.Text;
 
 
 namespace ResxClassGenerator
@@ -12,21 +13,32 @@ namespace ResxClassGenerator
     {
         static void Main(string[] args)
         {
-            var cmd = new GenArgs
-            {
-                //ResxFilePath = "Strings.resx",
-                //Class = "Strings",
-                //Namespace = "Test"
-            };
-            if (!CommandLine.Parser.Default.ParseArguments(args, cmd))
-                return;
+            var cmd = new GenArgs();
+            var parser = new CommandLine.Parser(with => with.HelpWriter = Console.Error);
 
-            if (!File.Exists(cmd.ResxFilePath))
+            if (parser.ParseArgumentsStrict(args, cmd, () =>
             {
-                Console.WriteLine($"RESX file {cmd.ResxFilePath} does not eixst");
-                return;
+                Console.ReadLine();
+                Environment.FailFast("Failed");
+            }))
+            {
+                if (File.Exists(cmd.ResxFilePath))
+                {
+                    Run(cmd);
+                }
+                else
+                {
+                    Console.WriteLine($"RESX file {cmd.ResxFilePath} does not eixst");
+                }
             }
 
+            Console.WriteLine("Press <ENTER> to quit");
+            Console.ReadLine();
+        }
+
+
+        static void Run(GenArgs cmd)
+        {
             Console.WriteLine("Deleting any old interface & class files");
             File.Delete($"I{cmd.Class}.cs");
             File.Delete($"{cmd.Class}.cs");
@@ -53,19 +65,19 @@ namespace ResxClassGenerator
             var values = GetValues(cmd.ResxFilePath);
             foreach (var value in values)
             {
-                    @int
-                        .AppendLine("/// <summary>")
-                        .AppendLine($"/// English value is '{value.Item2}'")
-                        .AppendLine("/// </summary>")
-                        .Append($"        public string {value.Item1}")
-                        .Append(" { get; }")
-                        .AppendLine()
-                        .AppendLine();
+                @int
+                    .AppendLine("        /// <summary>")
+                    .AppendLine($"      /// Localized value equivalent to '{value.Item2}'")
+                    .AppendLine("        /// </summary>")
+                    .Append($"        public string {value.Item1}")
+                    .Append(" { get; }")
+                    .AppendLine()
+                    .AppendLine();
 
-                    @class
-                        .Append($"        public string {value.Item1}")
-                        .Append(" { get; set; }")
-                        .AppendLine();
+                @class
+                    .Append($"        public string {value.Item1}")
+                    .Append(" { get; set; }")
+                    .AppendLine();
             }
             @int
                 .AppendLine("    }")
@@ -78,8 +90,7 @@ namespace ResxClassGenerator
             Console.WriteLine("Writing Interface & Class Files");
             File.WriteAllText($"I{cmd.Class}.cs", @int.ToString());
             File.WriteAllText($"{cmd.Class}.cs", @class.ToString());
-            Console.WriteLine("Done - Press <ENTER> to quit");
-            Console.ReadLine();
+            Console.WriteLine("Files Generated Successfully");
         }
 
 
