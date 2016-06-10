@@ -1,16 +1,18 @@
 ﻿using System;
+using CommandLine;
 
 
 namespace ResxClassGenerator
 {
     public class GenArgs
     {
+        [Option("resx", Required = true, HelpText = "RESX file to parse")]
         public string ResxFilePath { get; set; }
-        public string InterfaceFilePath { get; set; }
-        public string InterfaceName { get; set; }
-        public string InterfaceNamespace { get; set; }
-        public string ImplementationFilePath { get; set; }
-        public string ImplementationClassName { get; set; }
-        public string ImplementationNamespace { get; set; }
+
+        [Option("class", Required = true, HelpText = "Name of the class")]
+        public string Class { get; set; }
+
+        [Option("namespace", Required = true, HelpText = "Namespace of the class")]
+        public string Namespace { get; set; }
     }
 }

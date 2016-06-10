@@ -1,2 +1,3 @@
 ﻿@echo off
-resxclassgenerator
+resxclassgenerator -resx "Strings.resx" -class "Strings" -namespace "MyLibrary"
+pause
