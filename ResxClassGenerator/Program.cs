@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Resources;
 using System.Text;
-using CommandLine.Text;
 
 
 namespace ResxClassGenerator
@@ -67,9 +66,9 @@ namespace ResxClassGenerator
             {
                 @int
                     .AppendLine("        /// <summary>")
-                    .AppendLine($"      /// Localized value equivalent to '{value.Item2}'")
+                    .AppendLine($"        /// Localized value equivalent to '{value.Item2}'")
                     .AppendLine("        /// </summary>")
-                    .Append($"        public string {value.Item1}")
+                    .Append($"        string {value.Item1}")
                     .Append(" { get; }")
                     .AppendLine()
                     .AppendLine();
