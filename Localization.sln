@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acr.Localization", "Acr.Localization\Acr.Localization.csproj", "{B11A5B45-6A27-4903-877E-E3A11350639F}"
 EndProject
@@ -33,6 +33,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acr.Localization.Api.IisHosting", "Acr.Localization.Api.IisHosting\Acr.Localization.Api.IisHosting.csproj", "{BC39A7FF-4562-4BA6-A4C4-22A0F1EAAA04}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResxClassGenerator", "ResxClassGenerator\ResxClassGenerator.csproj", "{DF207347-CC2A-4ACD-9105-89845422D6A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.AcrLocalization", "Cake.AcrLocalization\Cake.AcrLocalization.csproj", "{63CFE6D5-BF49-4AF6-9C40-FAE53E38A76A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +78,10 @@ Global
 		{DF207347-CC2A-4ACD-9105-89845422D6A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF207347-CC2A-4ACD-9105-89845422D6A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF207347-CC2A-4ACD-9105-89845422D6A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63CFE6D5-BF49-4AF6-9C40-FAE53E38A76A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63CFE6D5-BF49-4AF6-9C40-FAE53E38A76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63CFE6D5-BF49-4AF6-9C40-FAE53E38A76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63CFE6D5-BF49-4AF6-9C40-FAE53E38A76A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
