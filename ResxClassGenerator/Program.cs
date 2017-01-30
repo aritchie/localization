@@ -48,6 +48,7 @@ namespace ResxClassGenerator
             @int
                 .AppendLine("using System;")
                 .AppendLine()
+                .AppendLine()
                 .AppendLine($"namespace {cmd.Namespace}")
                 .AppendLine("{")
                 .AppendLine($"    public interface I{cmd.Class}")
@@ -55,6 +56,7 @@ namespace ResxClassGenerator
 
             @class
                 .AppendLine("using System;")
+                .AppendLine()
                 .AppendLine()
                 .AppendLine($"namespace {cmd.Namespace}.Impl")
                 .AppendLine("{")
@@ -75,7 +77,7 @@ namespace ResxClassGenerator
 
                 @class
                     .Append($"        public string {value.Item1}")
-                    .Append(" { get; set; }")
+                    .Append($" => Resources.Strings.{value.Item1};")
                     .AppendLine();
             }
             @int
