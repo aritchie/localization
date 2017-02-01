@@ -13,9 +13,11 @@ namespace ResxClassGenerator
         [Option("class", Required = true, HelpText = "Name of the class")]
         public string Class { get; set; }
 
-        [Option("namespace", Required = true, HelpText = "Namespace of the class")]
+        [Option("namespace", Required = true, HelpText = "Namespace of the interface")]
         public string Namespace { get; set; }
 
+        [Option("classnamespace", Required = true, HelpText = "Namespace of the class implementation")]
+        public string ClassNamespace { get; set; }
 
         [HelpOption]
         public string GetUsage()

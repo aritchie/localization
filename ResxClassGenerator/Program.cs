@@ -31,8 +31,8 @@ namespace ResxClassGenerator
                 }
             }
 
-            Console.WriteLine("Press <ENTER> to quit");
-            Console.ReadLine();
+            //Console.WriteLine("Press <ENTER> to quit");
+            //Console.ReadLine();
         }
 
 
@@ -58,7 +58,7 @@ namespace ResxClassGenerator
                 .AppendLine("using System;")
                 .AppendLine()
                 .AppendLine()
-                .AppendLine($"namespace {cmd.Namespace}.Impl")
+                .AppendLine($"namespace {cmd.ClassNamespace}")
                 .AppendLine("{")
                 .AppendLine($"    public class {cmd.Class} : I{cmd.Class}")
                 .AppendLine("    {");
